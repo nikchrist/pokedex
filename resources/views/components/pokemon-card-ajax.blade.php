@@ -1,3 +1,4 @@
+@foreach($allpokemons as $pokemon)
 <div class="poke-wrapper {{$loop->odd?'bg-blue':'bg-cyan'}}">
         <div class="general-info">
             <div class="row text-center d-md-flex gx-5 align-items-center" style="min-height: 20vh">
@@ -48,3 +49,8 @@
             </div>
         </div>
     </div>
+    @endforeach
+
+    <div id="pagination-wrapper">
+        {{ $allpokemons->links()}}
+      </div>

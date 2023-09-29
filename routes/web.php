@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PokemonsController;
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\WishListController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,5 @@ use App\Http\Controllers\AjaxController;
 |
 */
 Route::get('/',[PokemonsController::class,'index']);
+Route::get('/wishlist',[WishListController::class,'show']);
+Route::post('/wishlist/{id}',[WishListController::class,'update']);

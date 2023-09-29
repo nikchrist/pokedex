@@ -15,7 +15,8 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('pokemonid')->nullable()->default(0);
             $table->string('name');
-            $table->string('image')->nullable()->default('./images/pokemon-logo-png-1447_50x50');
+            $table->string('image')->nullable();
+            $table->boolean('wishlist')->default(false);
             $table->double('weight');
             $table->mediumInteger('height');
             $table->mediumInteger('hp');

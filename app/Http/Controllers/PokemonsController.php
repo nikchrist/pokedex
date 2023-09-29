@@ -17,10 +17,20 @@ class PokemonsController extends Controller
     private $allpokemonscount = [];
     private $endpoint = "https://pokeapi.co/api/v2/pokemon";
 
-    public function index(){
+    public function index(Request $request){
         $this->getPokemons();
-        $allpokemons = Pokemons::with(['pokemon_categories'])->paginate(50);
-        return view('home',compact('allpokemons'));
+        $allpokemons = Pokemons::with(['pokemon_categories'])
+        ->orderBy('weight','desc')
+        ->paginate(50);
+        
+        if($request->ajax())
+        {
+            return response()->json([
+                'html' => view('components.pokemon-card-ajax',compact('allpokemons'))->render()
+            ]);
+        } else {
+            return view('home',compact('allpokemons'));
+        }
     }
 
         function countPokemons(){

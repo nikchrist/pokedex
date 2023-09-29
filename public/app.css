@@ -1,3 +1,4 @@
+/* GENERAL */
 html,body{
   margin: 0;
   padding: 0;
@@ -48,14 +49,14 @@ html,body{
 
 .weight p{
   position: absolute;
-  top: -20%;
+  top: -30px;
   left: 85%;
   z-index: 100;
 }
 
 .height p{
   position: absolute;
-  top: -20%;
+  top: -30px;
   left: -5%;
   z-index: 100;
 }
@@ -69,8 +70,8 @@ html,body{
   position: absolute;
   z-index: 0;
   top: -10%;
-  left: 40%;
-  font-size: 120px;
+  left: 50%;
+  font-size: 90px;
   color: rgba(255,255,255,0.2)
 }
 
@@ -105,6 +106,9 @@ html,body{
 #pagination-wrapper nav ul{
   text-align: center!important;
 }
+
+/* Back to top of page button */
+
 #scroll-up {
   position: fixed;
   bottom: 40px;
@@ -127,6 +131,66 @@ html,body{
   color: darkseagreen;
 }
 
+/* Heart icon */
+.fa-heart{
+  color: rgb(13, 13, 53)
+}
+
+.fa-heart:hover{
+  transform: scale(1.2,1,2);
+  color: #fff;
+  cursor: pointer;
+}
+
+.wishlist{
+  margin-top: 30px;
+  z-index: 9999;
+}
+
+/* change wishlisted heart icon color */
+
+.wishlistcolored{
+  color: rgb(114, 26, 26);
+}
+
+/* MENU */
+
+.navbar{
+  text-align: center;
+  width: 100%;
+}
+
+.menu{
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu div a{
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu div{
+  text-align: center;
+  margin-right: 20px;
+  transition: 0.4s all ease-in;
+  -webkit-transition: 0.4s all ease-in;
+  -o-transition: 0.4s all ease-in;
+  -ms-transition: 0.4s all ease-in;
+}
+
+.menu div:hover{
+  background:rgb(13, 13, 53);
+  transform: scale(1.2,1.2);
+}
+
+.menu div:hover a{
+  color: #fff;
+}
+
 /* Mobile */
 @media screen and (max-width: 700px)
 {
@@ -134,5 +198,10 @@ html,body{
     width: 50%;
     margin-left: -30px;
     transform: scale(0.7,0.7);
+  }
+
+  .poke-id{
+    font-size: 60px;
+    left: 40%;
   }
 }
