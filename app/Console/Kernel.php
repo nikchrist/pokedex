@@ -4,6 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Http\Controllers\PokemonsController;
+use App\Models\Pokemons;
 
 class Kernel extends ConsoleKernel
 {
@@ -12,6 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
+        $pokemons = new PokemonsController;
+        $schedule->call($pokemons->updatePokemons())->sundays()->at('9:00');
         // $schedule->command('inspire')->hourly();
     }
 
