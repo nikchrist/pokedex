@@ -26,7 +26,7 @@ class getPokemons implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(): void
+    /*public function handle(): void
     {
         $limit = 100;
         $endpoint = "https://pokeapi.co/api/v2/pokemon";
@@ -38,5 +38,5 @@ class getPokemons implements ShouldQueue
         $this->pokemonsdata[] = $hundredpokemons->results;
         $limit+=100;
         
-    }
+    } */
 }

@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call(PokemonCategoriesSeeder::class);
-        $this->call(PokemonsSeeder::class);
+        //$this->call(PokemonCategoriesSeeder::class);
+       //$this->call(PokemonsSeeder::class);
     }
 }
